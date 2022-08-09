@@ -1,0 +1,28 @@
+@import "../variables";
+@import "../mixins";
+
+.footer {
+  background-color: $color-violet;
+
+  &-nav {
+    @include container;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 232px);
+    justify-content: center;
+    row-gap: 30px;
+
+    @media screen and (max-width: 1159px) {
+      text-align: center;
+    }
+
+    &__col-1 {
+      //grid-column: 2 / 1;
+      grid-row: 1 / 3;
+    }
+
+    &__col-5 {
+
+    }
+  }
+}

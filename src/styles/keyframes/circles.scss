@@ -1,0 +1,64 @@
+@keyframes circle-1 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 99px;
+    height: 99px;
+    opacity: 1;
+  }
+}
+
+@keyframes circle-2 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 160px;
+    height: 160px;
+    opacity: 1;
+  }
+}
+
+@keyframes circle-3 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 258px;
+    height: 258px;
+    opacity: .8;
+  }
+}
+
+@keyframes circle-4 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 416px;
+    height: 416px;
+    opacity: .6;
+  }
+}
+
+@keyframes circle-5 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 670px;
+    height: 670px;
+    opacity: .4;
+  }
+}

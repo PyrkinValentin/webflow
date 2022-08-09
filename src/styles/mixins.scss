@@ -1,0 +1,23 @@
+@mixin container {
+  margin: 0 auto;
+  max-width: 1160px;
+  width: 100%;
+
+  @media screen and (min-width: 1160px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 1159px) {
+    padding: 40px 16px;
+  }
+}
+
+@mixin container-no_border {
+  @media screen and (min-width: 1160px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 1159px) {
+    padding: 40px 16px;
+  }
+}

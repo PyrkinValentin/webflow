@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Meta APP</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:wght@300;400&family=Inter&display=swap"
+				rel="stylesheet">
+	
+	<link rel="stylesheet" href="styles/reset.scss"/>
+	<link rel="stylesheet" href="styles/common/common.scss"/>
+	<link rel="stylesheet" href="styles/common/buttons.scss"/>
+	<link rel="stylesheet" href="styles/common/header.scss"/>
+	<link rel="stylesheet" href="styles/common/tabs.scss"/>
+	<link rel="stylesheet" href="styles/pages/index.scss"/>
+	<link rel="stylesheet" href="styles/common/footer.scss"/>
+</head>
+<body>
+<header class="header">
+	<a href="/" class="logo-meta">
+		<svg viewBox="0 0 123 32" width="123" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.0089 30.9329H27.1297V13.1413L18.5446 30.0371C18.3336 30.4676 18.0356 30.794 17.6507 31.0163C17.2783 31.2385 16.8747 31.3497 16.4402 31.3497C16.0181 31.3497 15.6208 31.2385 15.2484 31.0163C14.8883 30.794 14.6028 30.4676 14.3918 30.0371L5.76935 13.1413V30.9329H0.927414V3.37044C0.927414 2.74545 1.08881 2.18989 1.41161 1.70377C1.74682 1.21767 2.18135 0.891279 2.71521 0.724613C2.97592 0.655168 3.23664 0.634334 3.49736 0.662112C3.75809 0.676001 4.00638 0.738502 4.24228 0.849612C4.49059 0.946835 4.71405 1.09267 4.91269 1.28711C5.11134 1.46767 5.27895 1.68989 5.41552 1.95378L16.4402 23.3913L27.4649 1.95378C27.7505 1.426 28.1415 1.051 28.6382 0.828779C29.1472 0.606557 29.6748 0.571835 30.2211 0.724613C30.7426 0.891279 31.1709 1.21767 31.5061 1.70377C31.8413 2.18989 32.0089 2.74545 32.0089 3.37044V30.9329Z" fill="currentColor"/><path d="M58.6209 15.8704C58.6209 16.6205 58.503 17.433 58.2671 18.3079C58.0312 19.1691 57.6463 19.9746 57.1124 20.7246C56.5911 21.4607 55.902 22.0788 55.0454 22.5788C54.2011 23.0788 53.1706 23.3287 51.954 23.3287H43.2198V18.1829H51.954C52.612 18.1829 53.1209 17.9607 53.481 17.5163C53.841 17.0579 54.021 16.4955 54.021 15.8288C54.021 15.1204 53.8162 14.5649 53.4065 14.1621C53.0093 13.7594 52.525 13.558 51.954 13.558H43.2198C42.5618 13.558 42.0528 13.7871 41.6928 14.2454C41.3328 14.6899 41.1527 15.2454 41.1527 15.9121V23.4747C41.1527 24.1968 41.3514 24.7594 41.7487 25.1621C42.1583 25.5649 42.6612 25.7663 43.2571 25.7663H51.954V30.9329H43.2198C42.5494 30.9329 41.8231 30.801 41.041 30.5371C40.2712 30.2732 39.5512 29.8496 38.8807 29.2662C38.2227 28.669 37.6702 27.8982 37.2233 26.9538C36.7763 25.9954 36.5528 24.8357 36.5528 23.4747V15.8704C36.5528 15.1204 36.6708 14.3149 36.9067 13.4538C37.1426 12.5788 37.5213 11.7732 38.0427 11.0371C38.5765 10.2871 39.2656 9.66211 40.1098 9.16211C40.9664 8.66211 42.0032 8.41212 43.2198 8.41212H51.954C52.6244 8.41212 53.3444 8.54405 54.1142 8.80795C54.8963 9.07184 55.6164 9.50239 56.2744 10.0996C56.9449 10.683 57.5035 11.4538 57.9504 12.4122C58.3974 13.3566 58.6209 14.5093 58.6209 15.8704Z" fill="currentColor"/><path d="M80.1862 13.8288H71.7314V30.9329H66.8336V13.8288H60.5391V8.41212H66.8336V1.05795H71.7314V8.41212H80.1862V13.8288Z" fill="currentColor"/><path d="M102.999 23.4747C102.999 24.2246 102.881 25.0371 102.645 25.9121C102.409 26.7732 102.024 27.5788 101.49 28.3287C100.97 29.0649 100.28 29.683 99.4231 30.1829C98.5793 30.683 97.5485 30.9329 96.3319 30.9329H87.598C86.9276 30.9329 86.2013 30.801 85.4191 30.5371C84.6494 30.2732 83.9293 29.8496 83.2589 29.2662C82.6009 28.669 82.0484 27.8982 81.6014 26.9538C81.1545 25.9954 80.931 24.8357 80.931 23.4747C80.931 22.7246 81.049 21.9121 81.2849 21.0371C81.5208 20.1621 81.8994 19.3566 82.4209 18.6205C82.9547 17.8704 83.6438 17.2454 84.488 16.7455C85.3446 16.2454 86.3814 15.9954 87.598 15.9954H96.3319V21.1621H87.598C86.94 21.1621 86.431 21.3913 86.0709 21.8496C85.7109 22.2941 85.5309 22.8496 85.5309 23.5163C85.5309 24.2246 85.7358 24.7802 86.1455 25.1829C86.5676 25.5718 87.0642 25.7663 87.6353 25.7663H96.3319C96.9898 25.7663 97.499 25.5441 97.8594 25.0996C98.2188 24.6551 98.399 24.0996 98.399 23.433V15.8704C98.399 15.1621 98.2007 14.5996 97.8031 14.1829C97.4189 13.7663 96.9278 13.558 96.3319 13.558H85.6985V8.41212H96.3319C97.0022 8.41212 97.723 8.54405 98.4925 8.80795C99.2743 9.07184 99.9942 9.50239 100.652 10.0996C101.323 10.683 101.882 11.4538 102.328 12.4122C102.776 13.3566 102.999 14.5093 102.999 15.8704V23.4747Z" fill="currentColor"/><path d="M113.847 3.64961C113.847 4.02045 113.806 4.3517 113.724 4.64336C113.642 4.93503 113.53 5.19337 113.389 5.41837C113.251 5.6392 113.09 5.82878 112.908 5.98712C112.726 6.14545 112.534 6.27669 112.332 6.38087C112.135 6.48087 111.935 6.55378 111.73 6.59962C111.529 6.64545 111.339 6.66836 111.16 6.66836L114.194 9.59962H111.947L108.919 6.66836H107.875V5.04336H111.16C111.342 5.0267 111.508 4.98504 111.657 4.91837C111.81 4.84753 111.94 4.75378 112.048 4.63711C112.16 4.52045 112.246 4.38086 112.305 4.21837C112.365 4.0517 112.394 3.86211 112.394 3.64961V2.62462C112.394 2.53295 112.383 2.4642 112.361 2.41837C112.342 2.36836 112.316 2.33295 112.283 2.31212C112.253 2.28712 112.219 2.27253 112.182 2.26836C112.148 2.2642 112.117 2.26211 112.087 2.26211H107.293V9.59962H105.841V1.45586C105.841 1.34336 105.859 1.23711 105.896 1.13711C105.934 1.03712 105.984 0.949615 106.048 0.874615C106.115 0.799615 106.193 0.741282 106.282 0.699615C106.372 0.657949 106.468 0.637115 106.572 0.637115H112.087C112.412 0.637115 112.685 0.703782 112.908 0.837115C113.131 0.966281 113.313 1.13087 113.45 1.33087C113.592 1.5267 113.692 1.7392 113.752 1.96836C113.815 2.19754 113.847 2.41212 113.847 2.61212V3.64961Z" fill="currentColor"/><path d="M122.662 9.59962H116.037C115.933 9.59962 115.835 9.57879 115.747 9.53711C115.657 9.49545 115.579 9.4392 115.511 9.36836C115.448 9.29337 115.398 9.20587 115.361 9.10587C115.323 9.00587 115.305 8.89753 115.305 8.78087V0.637115H116.758V7.97461H122.662V9.59962Z" fill="currentColor"/></svg>
+	</a>
+	
+	<button class="header-nav__icon"> <!--Можно было с input type checkbox сделать, но не красиво...-->
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	
+	<div class="header-wrapper">
+		<nav class="header-nav">
+			<ul>
+				<li>
+					<a href="/">Wave NFTs</a>
+				</li>
+				<li>
+					<a href="/">Stories</a>
+				</li>
+				<li>
+					<a href="/">Contact</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<div class="social-buttons">
+			<a href="https://twitter.com">
+				<img src="assets/img/socials/twitter.svg" alt="twitter">
+			</a>
+			<a href="https://discord.com">
+				<img src="assets/img/socials/discord.svg" alt="discord">
+			</a>
+			<a href="https://youtube.com">
+				<img src="assets/img/socials/youtube.svg" alt="youtube">
+			</a>
+			<a href="https://web.telegram.org/">
+				<img src="assets/img/socials/telegram.svg" alt="telegram">
+			</a>
+		</div>
+	</div>
+</header>
+
+<section class="meta-label">
+	<div class="meta-label__content">
+		<h1>Meta record label</h1>
+		
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Suspendisse varius enim in eros elementum tristique. </p>
+		
+		<button type="button" aria-label="learn" class="btn btn-green">Learn More</button>
+	</div>
+	
+	<div class="slider">
+		<img src="assets/img/carousel/img-1.svg" alt="img 1">
+		<img src="assets/img/carousel/img-2.svg" alt="img 2">
+		<img src="assets/img/carousel/img-3.svg" alt="img 3">
+	</div>
+</section>
+
+<section class="wave">
+	<div class="wave-title">
+		<h2>Wave NFT</h2>
+		<p>COLLECTION of 777</p>
+		<img src="assets/img/carousel/img-2.svg" alt="img 2">
+	</div>
+	
+	<div class="wave-container">
+		<p class="card">
+			META WAVE NFT is your pass to Meta Record Label ecosystem.
+			It is your access to our industry experts, established artists, and partners. </p>
+		
+		<p class="text">
+			Hac habitasse platea dictumst vestibulum rhoncus est.
+			Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras. </p>
+		
+		<p class="text">
+			Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus.
+			Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar.
+			Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget. </p>
+		
+		<p class="text">
+			Maecenas ultricies mi eget mauris pharetra et ultrices.
+			A condimentum vitae sapien pellentesque habitant morbi. </p>
+		
+		<button class="btn btn-green_outline">Get one on OpenSea</button>
+	</div>
+</section>
+
+<section class="artists-logo">
+	<div class="artists-logo-container">
+		<div class="ticker">
+			<div>Artists</div>
+			<div>Artists</div>
+			<div>Artists</div>
+		</div>
+	</div>
+</section>
+
+<section class="artists">
+	<div>
+		<img src="assets/img/persons/person-1.svg" alt="person">
+		<p>Mark Popson</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-2.svg" alt="person">
+		<p>Pete Bentz</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-3.svg" alt="person">
+		<p>Daniela Youth</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-4.svg" alt="person">
+		<p>Roman Gore</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-5.svg" alt="person">
+		<p>Tonya</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-6.svg" alt="person">
+		<p>Ivor</p>
+	</div>
+	
+	<div>
+		<img src="assets/img/persons/person-7.svg" alt="person">
+		<p>Somae Petit</p>
+	</div>
+</section>
+
+<section class="story">
+	<h2>MRL. <span>THE STORY.</span></h2>
+	
+	<div class="story-tabs tabs">
+		<ul class="tabs-nav">
+			<li class="active">Our founders</li>
+			<li>Partners</li>
+			<li>The future</li>
+		</ul>
+		
+		<div class="tabs-content">
+			<div class="tabs-content__item _show">
+				<div class="story-tabs__item">
+					<img class="story-tabs__img" src="assets/img/story/img-1.svg" alt="story 1"/>
+					
+					<div>
+						<p class="card">
+							META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator. </p>
+						
+						<p class="text">
+							Hac habitasse platea dictumst vestibulum rhoncus est.
+							Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras. </p>
+						
+						<p class="text">
+							Maecenas ultricies mi eget mauris pharetra.
+							Sit amet consectetur adipiscing elit ut aliquam purus.
+							Porta nibh venenatis cras sed felis.
+							Aenean vel elit scelerisque mauris pellentesque pulvinar.
+							Et malesuada fames ac turpis egestas sed tempus.
+							Enim sit amet venenatis urna cursus eget. </p>
+						
+						<p class="text">
+							Maecenas ultricies mi eget mauris pharetra et ultrices.
+							A condimentum vitae sapien pellentesque habitant morbi. </p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="tabs-content__item">
+				<div class="story-tabs__item">
+					<img class="story-tabs__img" src="assets/img/story/img-1.svg" alt="story 1"/>
+					
+					<div>
+						<p class="card">
+							What is Lorem Ipsum? </p>
+						
+						<p class="text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+							essentially unchanged.
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+							Ipsum. </p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="tabs-content__item">
+				<div class="story-tabs__item">
+					<img class="story-tabs__img" src="assets/img/story/img-1.svg" alt="story 1"/>
+					
+					<div>
+						<p class="card">
+							Why do we use it? </p>
+						
+						<p class="text">
+							It is a long established fact that a reader will be distracted by the readable content of a page when
+							looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+							letters,
+							as opposed to using 'Content here, content here', making it look like readable English.
+							Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
+							and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+							Various versions have evolved over the years, sometimes by accident,
+							sometimes on purpose (injected humour and the like). </p>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section class="parallax">
+	<div></div>
+</section>
+
+<section class="roadmap">
+	<h2>Roadmap</h2>
+	
+	<div class="circle-1 circle">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+	<div class="phase">
+		<div class="phase-title">
+			<div class="phase-title__lvl _active">1</div>
+			
+			<div class="phase-title-wrapper">
+				<h3 class="phase-title__sub-title">Phase 1 - completed</h3>
+				<p>Spring 2022 - pre launch</p>
+			</div>
+		</div>
+		
+		<div class="phase-content">
+			<div>
+				<ol>
+					<li>Website 1.2</li>
+					<li>Discord community promotion</li>
+					<li>MINTING WAVE NFTs</li>
+				</ol>
+				
+				<p>
+					WAVE NFTs will be 100% pre-minted and launched as an OpenOcean collection </p>
+			</div>
+			
+			<img src="assets/img/carousel/img-1.svg" alt="img 1">
+		</div>
+	</div>
+	
+	<div class="separator"></div>
+	
+	<div class="circle-2 circle">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+	<div class="phase">
+		<div class="phase-title">
+			<div class="phase-title__lvl">2</div>
+			
+			<div class="phase-title-wrapper">
+				<h3 class="phase-title__sub-title">Phase 2</h3>
+				<p>Summer 2022 - GROWTH</p>
+			</div>
+		</div>
+		
+		<div class="phase-content">
+			<div>
+				<ol>
+					<li>Hiring for 10 positions in</li>
+					<li>Partnerships with main Meta-verse players</li>
+					<li>Partnerships with WEB 2.0 music distribution channels</li>
+				</ol>
+				
+				<p>
+					Onboard 100 new artists <br/>
+					META Record Labels is holding the first screening of aspiring artists from the list of WAVE NFT holders </p>
+			</div>
+			
+			<img src="assets/img/carousel/img-2.svg" alt="img 2">
+		</div>
+	</div>
+	
+	<div class="separator"></div>
+	
+	<div class="circle-3 circle">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+	<div class="phase">
+		<div class="phase-title">
+			<div class="phase-title__lvl">3</div>
+			
+			<div class="phase-title-wrapper">
+				<h3 class="phase-title__sub-title">Phase 3</h3>
+				<p>Summer 2022 - YOuR new stage</p>
+			</div>
+		</div>
+		
+		<div class="phase-content">
+			<div>
+				<ol>
+					<li>Onboard new partners</li>
+					<li>First live concert in Sandbar</li>
+					<li>Live concert in Decentralised</li>
+				</ol>
+				
+				<p>
+					We secured dates for out artists to peform in front of the live audience of Meta-verse.
+					Check the concert schedule in our </p>
+			</div>
+			
+			<img src="assets/img/carousel/img-3.svg" alt="img 3">
+		</div>
+	</div>
+</section>
+
+<section class="partners">
+	<h3>Our partners</h3>
+	
+	<div class="partners-logos">
+		<div class="partners-logos__items">
+			<div>LOGOHOLDER</div>
+			<div>LOGOHOLDER</div>
+			<div>LOGOHOLDER</div>
+		</div>
+		
+		<div class="partners-logos__items">
+			<div>LOGOHOLDER</div>
+			<div>LOGOHOLDER</div>
+			<div>LOGOHOLDER</div>
+		</div>
+	</div>
+</section>
+
+<section class="faq">
+	<div class="faq-title">
+		<h3>Frequently</h3>
+		<h3>asked</h3>
+		<h3>questions</h3>
+		
+		<img src="assets/img/carousel/img-1.svg" alt="img 1">
+	</div>
+	
+	<div class="faq-content">
+		<label>
+			<span class="faq__frequently">
+				How can I get into Meta RL?
+			</span>
+			
+			<input type="radio" name="faq" checked>
+			
+			<span class="faq__question">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Suspendisse varius enim in eros elementum tristique.
+				Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+				Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+				Nunc ut sem vitae risus tristique posuere.
+			</span>
+		</label>
+		
+		<label class="faq__frequently">
+			<span class="faq__frequently">
+				When is the NFT launch?
+			</span>
+			
+			<input type="radio" name="faq">
+			
+			<span class="faq__question">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Suspendisse varius enim in eros elementum tristique.
+				Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+				Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+				Nunc ut sem vitae risus tristique posuere.
+			</span>
+		</label>
+		
+		<label class="faq__frequently">
+			<span class="faq__frequently">
+				Can I hold META WAVE NFT as an investment?
+			</span>
+			
+			<input type="radio" name="faq">
+			
+			<span class="faq__question">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Suspendisse varius enim in eros elementum tristique.
+				Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+				Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+				Nunc ut sem vitae risus tristique posuere.
+			</span>
+		</label>
+		
+		<label class="faq__frequently">
+			<span class="faq__frequently">
+				Where can I get a WAVE NFT?
+			</span>
+			
+			<input type="radio" name="faq">
+			
+			<span class="faq__question">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Suspendisse varius enim in eros elementum tristique.
+				Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+				Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+				Nunc ut sem vitae risus tristique posuere.
+			</span>
+		</label>
+	</div>
+</section>
+
+<div class="teams">
+	<div class="ticker">
+		<div>TEAM</div>
+		<div>TEAM</div>
+		<div>TEAM</div>
+	</div>
+</div>
+
+<section class="command">
+ 	<div>
+		<img class="photo" src="assets/img/command/img-1.svg" alt="Shaky Lake">
+		
+		<p class="name">Shaky Lake</p>
+		<p class="role">Founder</p>
+	 
+		<div class="social-buttons">
+			<a href="https://twitter.com">
+				<img src="assets/img/socials/twitter.svg" alt="twitter">
+			</a>
+			<a href="https://www.linkedin.com/">
+				<img src="assets/img/socials/in.svg" alt="in">
+			</a>
+		</div>
+		
+		<p class="about_me">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+		</p>
+	</div>
+	
+	<div>
+		<img class="photo" src="assets/img/command/img-2.svg" alt="Baky Hike">
+		
+		<p class="name">Baky Hike</p>
+		<p class="role">Co-founder</p>
+		
+		<div class="social-buttons">
+			<a href="https://twitter.com">
+				<img src="assets/img/socials/twitter.svg" alt="twitter">
+			</a>
+			<a href="https://www.linkedin.com/">
+				<img src="assets/img/socials/in.svg" alt="in">
+			</a>
+		</div>
+		
+		<p class="about_me">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+		</p>
+	</div>
+	
+	<div>
+		<img class="photo" src="assets/img/command/img-3.svg" alt="Vania Do">
+		
+		<p class="name">Vania Do</p>
+		<p class="role">Producer</p>
+		
+		<div class="social-buttons">
+			<a href="https://twitter.com">
+				<img src="assets/img/socials/twitter.svg" alt="twitter">
+			</a>
+			<a href="https://www.linkedin.com/">
+				<img src="assets/img/socials/in.svg" alt="in">
+			</a>
+		</div>
+		
+		<p class="about_me">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+		</p>
+	</div>
+</section>
+
+<section class="discord">
+	<div>
+		<h3 class="discord__title">
+			Join our <span>Discord</span>
+		</h3>
+		
+		<p class="discord__description">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Suspendisse varius enim in eros elementum tristique.
+		</p>
+		
+		<button type="button" aria-label="Join Discord" class="btn btn-green">
+			<img src="assets/img/socials/discord.svg" alt="discord"> <!--Проблема с svg вектором и цвет установить невохможно белый при hover эффекте-->
+			Join Discord
+		</button>
+	</div>
+	<img src="assets/img/carousel/img-3.svg" alt="img 3">
+</section>
+
+<footer class="footer">
+	<nav class="footer-nav">
+		<div class="footer-nav__col footer-nav__col-1">
+			<a href="/" class="logo-meta">
+				<svg viewBox="0 0 123 32" width="103" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.0089 30.9329H27.1297V13.1413L18.5446 30.0371C18.3336 30.4676 18.0356 30.794 17.6507 31.0163C17.2783 31.2385 16.8747 31.3497 16.4402 31.3497C16.0181 31.3497 15.6208 31.2385 15.2484 31.0163C14.8883 30.794 14.6028 30.4676 14.3918 30.0371L5.76935 13.1413V30.9329H0.927414V3.37044C0.927414 2.74545 1.08881 2.18989 1.41161 1.70377C1.74682 1.21767 2.18135 0.891279 2.71521 0.724613C2.97592 0.655168 3.23664 0.634334 3.49736 0.662112C3.75809 0.676001 4.00638 0.738502 4.24228 0.849612C4.49059 0.946835 4.71405 1.09267 4.91269 1.28711C5.11134 1.46767 5.27895 1.68989 5.41552 1.95378L16.4402 23.3913L27.4649 1.95378C27.7505 1.426 28.1415 1.051 28.6382 0.828779C29.1472 0.606557 29.6748 0.571835 30.2211 0.724613C30.7426 0.891279 31.1709 1.21767 31.5061 1.70377C31.8413 2.18989 32.0089 2.74545 32.0089 3.37044V30.9329Z" fill="currentColor"/><path d="M58.6209 15.8704C58.6209 16.6205 58.503 17.433 58.2671 18.3079C58.0312 19.1691 57.6463 19.9746 57.1124 20.7246C56.5911 21.4607 55.902 22.0788 55.0454 22.5788C54.2011 23.0788 53.1706 23.3287 51.954 23.3287H43.2198V18.1829H51.954C52.612 18.1829 53.1209 17.9607 53.481 17.5163C53.841 17.0579 54.021 16.4955 54.021 15.8288C54.021 15.1204 53.8162 14.5649 53.4065 14.1621C53.0093 13.7594 52.525 13.558 51.954 13.558H43.2198C42.5618 13.558 42.0528 13.7871 41.6928 14.2454C41.3328 14.6899 41.1527 15.2454 41.1527 15.9121V23.4747C41.1527 24.1968 41.3514 24.7594 41.7487 25.1621C42.1583 25.5649 42.6612 25.7663 43.2571 25.7663H51.954V30.9329H43.2198C42.5494 30.9329 41.8231 30.801 41.041 30.5371C40.2712 30.2732 39.5512 29.8496 38.8807 29.2662C38.2227 28.669 37.6702 27.8982 37.2233 26.9538C36.7763 25.9954 36.5528 24.8357 36.5528 23.4747V15.8704C36.5528 15.1204 36.6708 14.3149 36.9067 13.4538C37.1426 12.5788 37.5213 11.7732 38.0427 11.0371C38.5765 10.2871 39.2656 9.66211 40.1098 9.16211C40.9664 8.66211 42.0032 8.41212 43.2198 8.41212H51.954C52.6244 8.41212 53.3444 8.54405 54.1142 8.80795C54.8963 9.07184 55.6164 9.50239 56.2744 10.0996C56.9449 10.683 57.5035 11.4538 57.9504 12.4122C58.3974 13.3566 58.6209 14.5093 58.6209 15.8704Z" fill="currentColor"/><path d="M80.1862 13.8288H71.7314V30.9329H66.8336V13.8288H60.5391V8.41212H66.8336V1.05795H71.7314V8.41212H80.1862V13.8288Z" fill="currentColor"/><path d="M102.999 23.4747C102.999 24.2246 102.881 25.0371 102.645 25.9121C102.409 26.7732 102.024 27.5788 101.49 28.3287C100.97 29.0649 100.28 29.683 99.4231 30.1829C98.5793 30.683 97.5485 30.9329 96.3319 30.9329H87.598C86.9276 30.9329 86.2013 30.801 85.4191 30.5371C84.6494 30.2732 83.9293 29.8496 83.2589 29.2662C82.6009 28.669 82.0484 27.8982 81.6014 26.9538C81.1545 25.9954 80.931 24.8357 80.931 23.4747C80.931 22.7246 81.049 21.9121 81.2849 21.0371C81.5208 20.1621 81.8994 19.3566 82.4209 18.6205C82.9547 17.8704 83.6438 17.2454 84.488 16.7455C85.3446 16.2454 86.3814 15.9954 87.598 15.9954H96.3319V21.1621H87.598C86.94 21.1621 86.431 21.3913 86.0709 21.8496C85.7109 22.2941 85.5309 22.8496 85.5309 23.5163C85.5309 24.2246 85.7358 24.7802 86.1455 25.1829C86.5676 25.5718 87.0642 25.7663 87.6353 25.7663H96.3319C96.9898 25.7663 97.499 25.5441 97.8594 25.0996C98.2188 24.6551 98.399 24.0996 98.399 23.433V15.8704C98.399 15.1621 98.2007 14.5996 97.8031 14.1829C97.4189 13.7663 96.9278 13.558 96.3319 13.558H85.6985V8.41212H96.3319C97.0022 8.41212 97.723 8.54405 98.4925 8.80795C99.2743 9.07184 99.9942 9.50239 100.652 10.0996C101.323 10.683 101.882 11.4538 102.328 12.4122C102.776 13.3566 102.999 14.5093 102.999 15.8704V23.4747Z" fill="currentColor"/><path d="M113.847 3.64961C113.847 4.02045 113.806 4.3517 113.724 4.64336C113.642 4.93503 113.53 5.19337 113.389 5.41837C113.251 5.6392 113.09 5.82878 112.908 5.98712C112.726 6.14545 112.534 6.27669 112.332 6.38087C112.135 6.48087 111.935 6.55378 111.73 6.59962C111.529 6.64545 111.339 6.66836 111.16 6.66836L114.194 9.59962H111.947L108.919 6.66836H107.875V5.04336H111.16C111.342 5.0267 111.508 4.98504 111.657 4.91837C111.81 4.84753 111.94 4.75378 112.048 4.63711C112.16 4.52045 112.246 4.38086 112.305 4.21837C112.365 4.0517 112.394 3.86211 112.394 3.64961V2.62462C112.394 2.53295 112.383 2.4642 112.361 2.41837C112.342 2.36836 112.316 2.33295 112.283 2.31212C112.253 2.28712 112.219 2.27253 112.182 2.26836C112.148 2.2642 112.117 2.26211 112.087 2.26211H107.293V9.59962H105.841V1.45586C105.841 1.34336 105.859 1.23711 105.896 1.13711C105.934 1.03712 105.984 0.949615 106.048 0.874615C106.115 0.799615 106.193 0.741282 106.282 0.699615C106.372 0.657949 106.468 0.637115 106.572 0.637115H112.087C112.412 0.637115 112.685 0.703782 112.908 0.837115C113.131 0.966281 113.313 1.13087 113.45 1.33087C113.592 1.5267 113.692 1.7392 113.752 1.96836C113.815 2.19754 113.847 2.41212 113.847 2.61212V3.64961Z" fill="currentColor"/><path d="M122.662 9.59962H116.037C115.933 9.59962 115.835 9.57879 115.747 9.53711C115.657 9.49545 115.579 9.4392 115.511 9.36836C115.448 9.29337 115.398 9.20587 115.361 9.10587C115.323 9.00587 115.305 8.89753 115.305 8.78087V0.637115H116.758V7.97461H122.662V9.59962Z" fill="currentColor"/></svg>
+			</a>
+		</div>
+		
+		<div class="col">
+			Wave NFTs
+		</div>
+		
+		<div class="col">
+			Licencing
+		</div>
+		
+		<div class="col">
+			Powered by Webflow
+		</div>
+		
+		<div class="footer-nav__col-5">
+			<div class="social-buttons">
+				<a href="https://twitter.com">
+					<img src="assets/img/socials/twitter.svg" alt="twitter">
+				</a>
+				<a href="https://discord.com">
+					<img src="assets/img/socials/discord.svg" alt="discord">
+				</a>
+				<a href="https://youtube.com">
+					<img src="assets/img/socials/youtube.svg" alt="youtube">
+				</a>
+				<a href="https://web.telegram.org/">
+					<img src="assets/img/socials/telegram.svg" alt="telegram">
+				</a>
+			</div>
+		</div>
+		
+		<div class="col">
+			Developed by Anastasiia G.
+		</div>
+		
+		<div class="col">
+			Stories
+		</div>
+		
+		<div class="col">
+			Style Guide
+		</div>
+		
+		<div class="col">
+			Developed by Anastasiia G.
+		</div>
+		
+		<div class="col">
+			Contact
+		</div>
+		
+		<div class="col">
+			Changelog
+		</div>
+	</nav>
+</footer>
+
+<script defer src="js/tabs.js"></script>
+</body>
+</html>

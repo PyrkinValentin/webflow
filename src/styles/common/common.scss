@@ -1,0 +1,65 @@
+@import "../variables";
+
+body {
+  background-color: $color-dark;
+
+  font-size: $font-size_default;
+  font-family: $font-family_common;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.6rem;
+
+  color: $color-white;
+}
+
+.logo-meta {
+  color: $color-white;
+}
+
+.social-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  justify-content: center;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    transition: transform .2s ease-in-out;
+
+    padding: 8px;
+    background-color: $color-white;
+  }
+
+  a:hover {
+    transform: scale(1.2);
+  }
+}
+
+.card {
+  text-align: start;
+  margin-bottom: 32px;
+  border-left: 2px solid $color-green;
+  padding-left: 22px;
+
+  font-family: $font-family_decorative;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $font-size_light;
+  line-height: 3.2rem;
+
+  color: $color-green;
+}
+
+.text {
+  margin-bottom: 16px;
+
+  font-family: $font-family_common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $font-size_default;
+  line-height: 2.6rem;
+
+  color: $color-white;
+}

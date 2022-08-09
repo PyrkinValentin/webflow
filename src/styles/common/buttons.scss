@@ -1,0 +1,43 @@
+@import "../variables";
+
+.btn {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  font-family: $font-family_decorative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size_default;
+  line-height: 1.6rem;
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: $color-dark;
+
+}
+
+.btn-green {
+  background-color: $color-green;
+  transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out, color .2s ease-in-out;
+
+  &:hover {
+    background-color: initial;
+    color: $color-green;
+    box-shadow: 0 0 0 1px $color-green inset;
+  }
+}
+
+.btn-green_outline {
+  background-color: initial;
+  color: $color-white;
+  box-shadow: 0 0 0 1px $color-green inset;
+  transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out, color .2s ease-in-out;
+
+  &:hover {
+    background-color: $color-green;
+    color: $color-dark;
+  }
+}

@@ -1,0 +1,135 @@
+@import "../variables";
+@import "../mixins";
+
+.header {
+  @include container;
+  background-color: $color-dark;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 1160px) {
+    padding: 48px 0 12px;
+    column-gap: 20px;
+  }
+
+  @media screen and (max-width: 1159px) {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    padding: 16px;
+    justify-content: space-between;
+  }
+
+  &-nav__icon {
+    @media screen and (min-width: 1160px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 1159px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+
+      span {
+        display: inline-block;
+
+        transition: transform .2s;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: $color-green;
+      }
+    }
+  }
+
+  &-nav__icon:focus {
+    span:nth-child(even) {
+      display: none;
+    }
+
+    span:nth-child(1) {
+      transform: rotate(45deg) translateY(4px);
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-4px);
+    }
+  }
+
+  &-nav__icon:focus + &-wrapper {
+    transform: translateX(0);
+  }
+
+  &-wrapper {
+    @media screen and (min-width: 1160px) {
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1159px) {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      overflow: auto;
+      padding-bottom: 64px;
+
+      transition: transform .4s ease-in-out;
+      transform: translateX(100%);
+
+      background-color: $color-dark;
+    }
+
+    @media screen and (max-width: 1159px) {
+      .social-buttons {
+        margin-top: 64px;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-nav {
+    ul {
+      @media screen and (min-width: 1160px) {
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 1159px) {
+        margin-top: 128px;
+      }
+
+      a {
+        padding: 10px 20px;
+
+        font-family: $font-family_decorative;
+        font-style: normal;
+        font-weight: 300;
+        font-size: $font-size_default;
+        line-height: 1.6rem;
+
+        transition: color .2s ease-in-out, box-shadow .6s ease-out;
+        color: $color-white;
+
+        @media screen and (max-width: 1159px) {
+          text-align: center;
+          display: block;
+        }
+      }
+
+      a:hover {
+        color: $color-green;
+        box-shadow: 0 0 0 1px $color-green inset;
+      }
+    }
+  }
+}
